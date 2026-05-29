@@ -1,65 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Guild Glory Bot</title>
+<title>Guild Glory Request</title>
 
-  <style>
-    body{
-      margin:0;
-      padding:0;
-      background:#0f0f0f;
-      font-family:Arial;
-      color:white;
-      text-align:center;
-    }
+<style>
+body{
+ background:#111;
+ color:white;
+ text-align:center;
+ font-family:Arial;
+ padding-top:80px;
+}
 
-    .box{
-      margin-top:120px;
-    }
+input{
+ padding:12px;
+ width:250px;
+ border:none;
+ border-radius:10px;
+ margin-top:20px;
+}
 
-    h1{
-      font-size:40px;
-      color:red;
-    }
-
-    p{
-      font-size:18px;
-      color:#ccc;
-    }
-
-    button{
-      margin-top:20px;
-      padding:12px 25px;
-      font-size:18px;
-      border:none;
-      border-radius:12px;
-      background:red;
-      color:white;
-    }
-
-    button:hover{
-      background:darkred;
-    }
-  </style>
+button{
+ padding:12px 25px;
+ border:none;
+ border-radius:10px;
+ background:red;
+ color:white;
+ margin-top:20px;
+ font-size:18px;
+}
+</style>
 </head>
 
 <body>
 
-<div class="box">
+<h1>Guild Join Request 🔥</h1>
 
-<h1>Guild Glory Bot 🔥</h1>
+<input type="text" id="uid" placeholder="Enter Free Fire UID">
 
-<p>Welcome To My Free Fire Guild Website</p>
+<br>
 
-<button onclick="showmsg()">
-Join Guild
+<button onclick="sendRequest()">
+Send Request
 </button>
 
-</div>
-
 <script>
-function showmsg(){
-  alert("Welcome To Guild Glory 🔥");
+function sendRequest(){
+ let uid = document.getElementById("uid").value;
+
+ if(uid==""){
+   alert("Enter UID");
+ } else {
+   alert("Request Sent For UID: " + uid);
+ }
 }
 </script>
 
